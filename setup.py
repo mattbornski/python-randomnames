@@ -1,12 +1,11 @@
 from setuptools import setup, find_packages
 import os
 
-execfile(os.path.join(os.path.dirname(__file__), 'randomnames/version.py'))
-
+import randomnames.version
 
 setup(
     name='python-randomnames',
-    version=".".join(map(str, VERSION)),
+    version=".".join(map(str, randomnames.version.VERSION)),
     packages = find_packages(),
 
     author = 'Concentric Sky',
